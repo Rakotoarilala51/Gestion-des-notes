@@ -33,4 +33,4 @@ L'objectif principal de ce projet est de concevoir et de développer une applica
 - RAKOTOARILALA Andriniaina Pierre Innocent
 - RAZAFIMANDIMBY Mamihasina Alain Vincent
 - HARIMBOLA Jean Michel
-- ANDRIATIANA Saotra Idealiniaina
+- ANDRIATIANA Saotra Idealilalaina
