@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>reload.png</file>
+    <file>app_negate.png</file>
+    <file>test__1_negate.png</file>
+    <file>test_negate.png</file>
+    <file>arrow_negate.png</file>
+    <file>clipboard_negate.png</file>
+    <file>edit_negate.png</file>
+    <file>logout_negate.png</file>
+    <file>menu_negate.png</file>
+  </qresource>
+</RCC>

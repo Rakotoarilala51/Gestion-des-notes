@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>notes</class>
+ <widget class="QDialog" name="notes">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1115</width>
+    <height>753</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Notes</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">* {
+border: none;
+background-color: transparent;
+background: transparent;
+padding: 0;
+margin: 0;
+color: #fff;
+}
+
+#notes, #mainBody, #btnEnregistrement{
+background-color: #1b1b27;
+/*/background-color: rgb(255, 255, 255);*/
+}
+
+#header, #mainBodyContent, #navigation {
+background-color: #27263c;
+}
+
+QPushButton {
+font-weight: bold;
+}
+
+#frame_2 QPushButton {
+padding: 10px;
+border-bottom: 1px solid #ff5bcc;
+border-radius: 24px;
+padding-left: 10px;
+}
+
+#navigation QPushButton {
+text-align: left;
+padding: 6px 8px;
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom: 2px solid rgb(0, 82, 98);
+border-left: 2px solid #4094da;
+margin: 8px;
+font-size: 14px;
+}
+
+QLineEdit {
+border-bottom: 2px solid rgb(0, 82, 98);
+border-left: 2px solid #4094da;
+border-top: 2px solid rgb(0, 82, 98);
+border-right: 2px solid #4094da;
+border-radius: 10px;
+padding: 10px;
+}
+
+QComboBox {
+font-size: 15px;
+border: 2px solid rgb(99, 29, 106);
+border-radius: 5px;
+}
+
+QSpinBox, QDoubleSpinBox {
+border: 2px solid rgb(0, 82, 98);
+border-radius: 3px;
+}
+
+QTableView::item:selected {
+color:white; 
+background:#000000; 
+font-weight:900; 
+}
+
+QTableCornerButton::section { 
+background-color:#232326; 
+}
+
+QHeaderView::section { 
+color:white; 
+background-color:#232326;
+}
+
+/*QTabWidget::tab-bar {
+ background-color: black;
+}*/
+
+QTabBar::tab:!selected {
+    /*background-color: #9E9E9E;*/
+	background-color: #1b1b27;
+    color: white;
+	width: 100px;
+ }
+
+QTabBar::tab:selected {
+    border-color:#4094da;
+    background-color: #4094da;
+    color: white;
+	width: 100px;
+}
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>60</height>
+      </size>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item alignment="Qt::AlignHCenter">
+       <widget class="QLabel" name="label">
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Notes</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget_2" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+background-color: rgb(55, 169, 200);
+border-radius: 10px;
+padding: 10px;
+}</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Niveaux :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="cbxNiveauNote"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableView" name="tbvListeNote"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget_5" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>250</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>250</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(39, 38, 60);</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QPushButton" name="pushButton_3">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="resources.qrc">
+             <normaloff>:/icons/edit_negate.png</normaloff>:/icons/edit_negate.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_14">
+           <item>
+            <widget class="QLineEdit" name="txtNumero">
+             <property name="placeholderText">
+              <string>Numéro</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="txtCodeMat">
+             <property name="placeholderText">
+              <string>Code Matière</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_9">
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="text">
+                <string>Année : </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="cbxAnnee"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_10">
+             <item>
+              <widget class="QLabel" name="label_5">
+               <property name="text">
+                <string>Note :</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="dsbNote"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_15">
+           <item>
+            <widget class="QPushButton" name="btnAjouter">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-bottom: 2px solid rgb(227, 8, 198);
+border-radius: 18px;
+background-color: rgb(227, 8, 198);</string>
+             </property>
+             <property name="text">
+              <string>Ajouter</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnModifier">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-bottom: 2px solid rgb(227, 8, 198);
+border-radius: 18px;
+background-color: rgb(227, 8, 198);</string>
+             </property>
+             <property name="text">
+              <string>Modifier</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnSupprimer">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-bottom: 2px solid rgb(227, 8, 198);
+border-radius: 18px;
+background-color: rgb(227, 8, 198);</string>
+             </property>
+             <property name="text">
+              <string>Supprimer</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnRetour">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(98, 178, 239);
+border-radius: 10px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/icons/arrow_negate.png</normaloff>:/icons/arrow_negate.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
